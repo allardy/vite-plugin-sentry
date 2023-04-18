@@ -55,7 +55,7 @@ export default function ViteSentry (options: ViteSentryPluginOptions) {
       also we dont't want to enable with disabled sourcemaps
     */
     configResolved (config) {
-      pluginState.sourcemapsCreated = !!config.build.sourcemap
+      pluginState.sourcemapsCreated = !!config.build.sourcemap || !!config.build.rollupOptions?.output?.sourcemap
       pluginState.isProduction = config.isProduction
       pluginState.enabled =
         pluginState.sourcemapsCreated &&

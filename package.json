@@ -29,8 +29,8 @@
     "sourcemap"
   ],
   "scripts": {
-    "bundle": "NODE_ENV=production rollup -c",
-    "dev": "NODE_ENV=develop rollup -c",
+    "bundle": "cross-env NODE_ENV=production rollup -c",
+    "dev": "cross-env NODE_ENV=develop rollup -c",
     "test": "jest ./src/*/**.test.ts",
     "test:coverage": "jest --coverage ./src/*/**.test.ts",
     "lint": "eslint ./src/**/*.ts",
@@ -45,6 +45,7 @@
     "@types/node": "^18.0.1",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
+    "cross-env": "^7.0.3",
     "eslint": "8.38.0",
     "husky": "^8.0.0",
     "is-ci": "^3.0.1",
